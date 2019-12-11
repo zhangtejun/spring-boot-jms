@@ -7,7 +7,7 @@ pipeline {
       stage('Build') {
          steps {
             echo 'Build starting ....'
-            sh 'mvn clean package'
+            sh 'mvn clean package -DskipTests'
             sh 'printenv'
          }
       }
