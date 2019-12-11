@@ -7,7 +7,7 @@ pipeline {
       stage('Build') {
          steps {
             echo 'Build starting ....'
-            sh 'mvn clean package -DskipTests'
+            sh 'mvn clean package spring-boot:repackage -DskipTests'
             sh 'printenv'
          }
       }
